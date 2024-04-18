@@ -43,4 +43,4 @@ The following files are available in the "experiments" folder:
 
 
 # Videos
-- ***************
+- A Youtube video of the performed experiment is available at the following link https://youtu.be/aeHZKyRfcEo
