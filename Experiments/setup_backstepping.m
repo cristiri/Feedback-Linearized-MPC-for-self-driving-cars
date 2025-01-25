@@ -1,8 +1,8 @@
 clear; close all;
 
-Ts=0.01;
+Ts=0.1;
 Ts2=Ts;
-Ts_data=0.01;
+Ts_data=0.1;
 
 l=0.256;
 
@@ -23,19 +23,10 @@ q0c=[x0+(l/2)*cos(theta0);y0+(l/2)*sin(theta0);theta0];
 q0v=[vicon_data(1);vicon_data(2);unwrap(vicon_data(6))];
 
 % % %Control parameters
-% d_x=0.2;
-% sigma=0.3;
-% alpha_c=0.4;
-% k3=2;
-
-
-
-% %Control parameters
-d_x=0.3;
+d_x=0.2;
 sigma=0.3;
-alpha_c=0.3;
-k3=3.5;
-
+alpha_c=0.4;
+k3=2;
 
 %Filter parameters
 alpha_kalman=0.9;
