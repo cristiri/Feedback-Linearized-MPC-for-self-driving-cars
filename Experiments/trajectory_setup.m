@@ -8,7 +8,7 @@ t=0:Ts2:Tf;
 
 
 
-Ts_new=0.008;
+% Ts_new=0.008;
 xr=qr(1,:);
 yr=qr(2,:);
 thetar=qr(3,:);
