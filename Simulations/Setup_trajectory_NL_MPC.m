@@ -62,7 +62,7 @@ Delta=0.35;
 N=5;
 
 qz=1;
-qu=0.0001;
+qu=0.01;
 
 
 %Filter parameters

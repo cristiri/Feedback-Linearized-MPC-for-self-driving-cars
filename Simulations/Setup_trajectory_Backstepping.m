@@ -66,10 +66,18 @@ q0=[x0;y0;theta0;phi0];
 
 
 
-d_x=1;
+% d_x=1;
+% sigma=0.3;
+% alpha_c=0.75;
+% k3=1.65;
+
+
+% % %Control parameters
+d_x=0.2;
 sigma=0.3;
-alpha_c=0.75;
-k3=1.65;
+alpha_c=0.4;
+k3=2;
+
 
 %Constraints
 v1max=2; %Driving velocity limit (m/s)
