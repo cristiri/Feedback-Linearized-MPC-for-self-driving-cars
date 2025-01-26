@@ -3,6 +3,7 @@ Ts=0.01;
 
 %Defining Eight-shaped Trajectory
 
+
 alpha=3;
 beta=1.7;
 
