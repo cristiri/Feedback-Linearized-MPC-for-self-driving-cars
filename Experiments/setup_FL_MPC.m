@@ -1,18 +1,18 @@
 clear; close all;
 
-Ts=0.01; %Sampling times
+Ts=0.008;
 Ts2=Ts;
-Ts_data=0.01; 
+Ts_data=0.01;
 
-l=0.256; %wheelbase
+l=0.256;
 
 
-plot_data=false; %true to plot trajectory
+plot_data=true;
 
 
 
 % %Control parameters
-K=7*eye(2);
+K=5*eye(2);
 Delta=0.35;
 % N=8; %good behaviour
 N=10;
@@ -49,10 +49,16 @@ kappa_kalman=0;
 % R_kalman=diag([2e-5 2e-5 0.0001 0.0001]);
 % P0_kalman=diag([1e-5 1e-5 1e-6 1e-6]);
 
+%Paper values
+% Q_kalman=diag([0.001 0.001 0.1 10]);
+% R_kalman=diag([2e-5 2e-5 0.0001 0.00001]);
+% P0_kalman=diag([1e-5 1e-5 1e-6 1e-6]);
 
-Q_kalman=diag([0.001 0.001 0.1 10]);
-R_kalman=diag([2e-5 2e-5 0.0001 0.00001]);
+
+Q_kalman=diag([0.001 0.001 0.1 1]);
+R_kalman=diag([2e-5 2e-5 0.0001 0.001]);
 P0_kalman=diag([1e-5 1e-5 1e-6 1e-6]);
+
 
 
 %Transfer function servomotor
@@ -150,6 +156,28 @@ trajectory_setup
 
 load('trajectory.mat')
 
+
+
+
+
+
+% %
+% load("tracking_error_FL_MPC")
+% 
+% for i=1:length(z_tilde1)
+%     zk=z_tilde1(2:3,i);
+% 
+%     if zk'*S*zk>1
+%         disp("Attenzione")
+%  
+%         break
+% 
+% 
+%     end
+% 
+% end
+% 
+% return
 
 % Getting Car's initial pose from Vicon
 vicon_port=18099;
